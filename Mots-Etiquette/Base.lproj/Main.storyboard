@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mots_Etiquette" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEp-tc-gem">
+                                <frame key="frameInset" minX="16" minY="280" width="343" height="106"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86c-QA-sTU">
+                                <frame key="frameInset" minX="16" minY="613" width="71" height="54"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                <state key="normal" title="Précédent"/>
+                                <connections>
+                                    <action selector="didTapPreviousButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ySt-yn-EnT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQp-IR-pCc">
+                                <frame key="frameInset" minX="308" minY="613" width="51" height="53"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                <state key="normal" title="Suivant"/>
+                                <connections>
+                                    <action selector="didTapNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZjC-nN-3qY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TEp-tc-gem" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AtQ-3S-pGQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="86c-QA-sTU" secondAttribute="bottom" constant="20" id="Ttr-si-MrD"/>
+                            <constraint firstItem="TEp-tc-gem" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ay0-l4-sdD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AQp-IR-pCc" secondAttribute="bottom" constant="20" id="hTh-zG-gTm"/>
+                            <constraint firstAttribute="trailing" secondItem="AQp-IR-pCc" secondAttribute="trailing" constant="13" id="rvh-dG-9lk"/>
+                            <constraint firstItem="86c-QA-sTU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zrn-lk-iSD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="WordLabel" destination="TEp-tc-gem" id="Ykj-UW-r04"/>
+                        <outlet property="nextButton" destination="AQp-IR-pCc" id="NJ9-Zm-LNt"/>
+                        <outlet property="previousButton" destination="86c-QA-sTU" id="C8M-ND-kps"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="1Br-fo-7wk"/>
+                        <outlet property="wordLabel" destination="TEp-tc-gem" id="jT2-Be-onz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
