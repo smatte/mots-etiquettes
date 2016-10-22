@@ -12,6 +12,7 @@
 		238DDCCA1DB045D700F8EC32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238DDCC81DB045D700F8EC32 /* Main.storyboard */; };
 		238DDCCC1DB045D700F8EC32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238DDCCB1DB045D700F8EC32 /* Assets.xcassets */; };
 		238DDCCF1DB045D700F8EC32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238DDCCD1DB045D700F8EC32 /* LaunchScreen.storyboard */; };
+		23DE71761DBBF6080037219E /* ABeeZee-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 23DE71751DBBF6080037219E /* ABeeZee-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		238DDCCB1DB045D700F8EC32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		238DDCCE1DB045D700F8EC32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		238DDCD01DB045D700F8EC32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23DE71751DBBF6080037219E /* ABeeZee-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ABeeZee-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				238DDCC31DB045D700F8EC32 /* Mots-Etiquette */,
+				23DE71731DBBF5ED0037219E /* Resources */,
 				238DDCC21DB045D700F8EC32 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +65,23 @@
 				238DDCD01DB045D700F8EC32 /* Info.plist */,
 			);
 			path = "Mots-Etiquette";
+			sourceTree = "<group>";
+		};
+		23DE71731DBBF5ED0037219E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23DE71741DBBF5F60037219E /* Font */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		23DE71741DBBF5F60037219E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				23DE71751DBBF6080037219E /* ABeeZee-Regular.otf */,
+			);
+			name = Font;
+			path = "Mots-Etiquette/Resources/Font";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +146,7 @@
 			files = (
 				238DDCCF1DB045D700F8EC32 /* LaunchScreen.storyboard in Resources */,
 				238DDCCC1DB045D700F8EC32 /* Assets.xcassets in Resources */,
+				23DE71761DBBF6080037219E /* ABeeZee-Regular.otf in Resources */,
 				238DDCCA1DB045D700F8EC32 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
