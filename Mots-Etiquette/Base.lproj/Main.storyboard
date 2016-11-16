@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,13 +28,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEp-tc-gem">
-                                <frame key="frameInset" minX="16" minY="280" width="343" height="106"/>
+                                <rect key="frame" x="16" y="280" width="343" height="106"/>
                                 <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86c-QA-sTU">
-                                <frame key="frameInset" minX="16" minY="613" width="71" height="54"/>
+                                <rect key="frame" x="16" y="613" width="71" height="54"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
                                 <state key="normal" title="Précédent"/>
                                 <connections>
@@ -39,17 +42,29 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQp-IR-pCc">
-                                <frame key="frameInset" minX="308" minY="613" width="51" height="53"/>
+                                <rect key="frame" x="308" y="613" width="51" height="53"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
                                 <state key="normal" title="Suivant"/>
                                 <connections>
                                     <action selector="didTapNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZjC-nN-3qY"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iq9-hS-gPv">
+                                <rect key="frame" x="105" y="28" width="165" height="29"/>
+                                <segments>
+                                    <segment title="Tous"/>
+                                    <segment title="10 derniers"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangeWordSelector:" destination="BYZ-38-t0r" eventType="valueChanged" id="KZd-Ac-bOA"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iq9-hS-gPv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2Ur-Jb-dlO"/>
                             <constraint firstItem="TEp-tc-gem" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AtQ-3S-pGQ"/>
+                            <constraint firstItem="iq9-hS-gPv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IxT-uk-MpF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="86c-QA-sTU" secondAttribute="bottom" constant="20" id="Ttr-si-MrD"/>
                             <constraint firstItem="TEp-tc-gem" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ay0-l4-sdD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AQp-IR-pCc" secondAttribute="bottom" constant="20" id="hTh-zG-gTm"/>
