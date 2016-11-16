@@ -1,5 +1,9 @@
 import UIKit
 
+enum SelectedWords {
+    case all, lastWeek
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var wordLabel: UILabel!
@@ -9,23 +13,38 @@ class ViewController: UIViewController {
     @IBAction func didTapNextButton(_ sender: AnyObject) {
         previousButton.isHidden = false
         index += 1
-        wordLabel.text = shuffledWords[index]
-        if index == shuffledWords.count - 1 {
+        wordLabel.text = words[index]
+        if index == words.count - 1 {
             nextButton.isHidden = true
         }
     }
     @IBAction func didTapPreviousButton(_ sender: AnyObject) {
         nextButton.isHidden = false
         index -= 1
-        wordLabel.text = shuffledWords[index]
+        wordLabel.text = words[index]
         if index == 0 {
             previousButton.isHidden = true
         }
     }
+    @IBAction func didChangeWordSelector(_ sender: AnyObject) {
+        let segmented = sender as! UISegmentedControl
+        if segmented.selectedSegmentIndex == 0 {
+            selectedWords = .all
+        } else {
+            selectedWords = .lastWeek
+        }
+        index = 0
+        wordLabel.text = words[index]
+        previousButton.isHidden = true
+        nextButton.isHidden = false
+    }
 
-    var shuffledWords: Array<String>!
-    var index: Int = 0
-    let csvUrl = URL(string: "https://dl.dropboxusercontent.com/u/8766933/mots-etiquettes.csv")!
+    private var shuffledWords: Array<String>!
+    private var lastWeekWords: Array<String>!
+    private var words: Array<String> { return selectedWords == .all ? shuffledWords : lastWeekWords }
+    private var index: Int = 0
+    private var selectedWords = SelectedWords.all
+    private let csvUrl = URL(string: "https://dl.dropboxusercontent.com/u/8766933/mots-etiquettes.csv")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +66,7 @@ class ViewController: UIViewController {
             } else {
                 self.shuffledWords = words.shuffled()
                 self.wordLabel.text = self.shuffledWords[0]
+                self.lastWeekWords = Array(words.suffix(10)).shuffled()
                 self.nextButton.isHidden = false
             }
         }
