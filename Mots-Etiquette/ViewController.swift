@@ -66,7 +66,7 @@ class ViewController: UIViewController {
             } else {
                 self.shuffledWords = words.shuffled()
                 self.wordLabel.text = self.shuffledWords[0]
-                self.lastWeekWords = Array(words.suffix(10)).shuffled()
+                self.lastWeekWords = Array(words.suffix(20)).shuffled()
                 self.nextButton.isHidden = false
             }
         }

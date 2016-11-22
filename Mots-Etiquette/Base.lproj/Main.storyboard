@@ -50,10 +50,10 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iq9-hS-gPv">
-                                <rect key="frame" x="105" y="28" width="165" height="29"/>
+                                <rect key="frame" x="103" y="28" width="169" height="29"/>
                                 <segments>
                                     <segment title="Tous"/>
-                                    <segment title="10 derniers"/>
+                                    <segment title="20 derniers"/>
                                 </segments>
                                 <connections>
                                     <action selector="didChangeWordSelector:" destination="BYZ-38-t0r" eventType="valueChanged" id="KZd-Ac-bOA"/>
